@@ -10,7 +10,7 @@ const options = {
       description: "API documentation for the School Management System",
     },
     servers: [
-        { url: process.env.URL_APi || "http://localhost:3001/school", description: "Development server" }  
+        { url: process.env.URL_API || "http://localhost:3001/school", description: "Development server" }  
     ],
     components: {
       schemas: {
