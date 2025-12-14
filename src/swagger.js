@@ -1,5 +1,7 @@
 import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
+import dotenv from "dotenv";
+dotenv.config();
 const options = {
   definition: {
     openapi: "3.0.0",
@@ -8,9 +10,7 @@ const options = {
       description: "API documentation for the School Management System",
     },
     servers: [
-      {
-        url: "http://localhost:3001/school",
-      },
+        { url: process.env.URL_APi || "http://localhost:3001/school", description: "Development server" }  
     ],
     components: {
       schemas: {
