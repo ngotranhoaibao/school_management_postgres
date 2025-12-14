@@ -1,0 +1,28 @@
+post http://localhost:3001/school/students
+Content-Type: application/json
+
+{
+  "name": "Student 2",
+  "email": "student3@example.com"
+}
+###
+post http://localhost:3001/school/courses
+Content-Type: application/json
+
+{
+  "title": "Course 3",
+   "code": "NODE01"
+}
+###
+post http://localhost:3001/school/enroll
+Content-Type: application/json
+
+{
+  "studentId": 1,
+  "courseId": 1
+}
+
+###
+get http://localhost:3001/school/students/1
+###
+DELETE http://localhost:3001/school/courses/1
